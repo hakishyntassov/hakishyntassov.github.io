@@ -1,0 +1,330 @@
+<!--
+  Minimal, text-forward portfolio inspired by annamfang.com
+  Replace the placeholder content with your own.
+  Deploy anywhere as a static site (GitHub Pages, Netlify, Vercel, etc.).
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Haki Shyntassov</title>
+    <meta name="description" content="Software Engineer & Researcher" />
+
+    <!-- Optional: social preview -->
+    <meta property="og:title" content="Haki Shyntassov" />
+    <meta property="og:description" content="Selected work, experience, and contact." />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <style>
+      :root {
+        --max: 760px;
+        --pad: 20px;
+        --text: #111;
+        --muted: #555;
+        --rule: #e5e5e5;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        padding: 0;
+        color: var(--text);
+        background: #fff;
+        font-family: "Baskervville", serif;
+        font-optical-sizing: auto;
+        /* font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+          "Apple Color Emoji", "Segoe UI Emoji"; */
+      }
+
+      a { 
+        color: inherit; 
+        text-decoration: none; 
+        text-underline-offset: 3px; 
+      }
+
+      a:hover { 
+        opacity: 0.8; 
+      }
+
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 28px var(--pad) 64px;
+      }
+
+      header {
+        display: flex;
+        gap: 18px;
+        align-items: baseline;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 22px;
+      }
+
+      .intro {
+        display: flex;
+        align-items: center;
+        gap: 20px; /* Adds space between the image and text */
+        max-width: 800px;
+      }
+
+      .intro img {
+        width: 200px; /* Adjust image size as needed */
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-left: auto; 
+        margin-right: 20px;
+      }
+
+      /* left side: brand + tagline + inline profile */
+      .brand {
+        display: block;
+      }
+
+      .tagline-row {
+        font-style: italic;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      /* right side of the header: nav + profile */
+      .header-right {
+        font-style: italic;
+        /* color: #002eff; */
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      nav ul {
+        font-style: 1;
+        list-style: none;
+        display: flex;
+        gap: 14px;
+        padding: 0;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 36px;
+        letter-spacing: 0.2px;
+        margin: 0;
+        text-align: center;
+      }
+
+      .lede {
+        margin-top: 10px;
+        margin-bottom: 18px;
+      }
+
+      .links {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        color: var(--muted);
+      }
+
+      hr {
+        border: 0;
+        border-top: 1px solid var(--rule);
+        margin: 26px 0;
+      }
+
+      section h2 {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        margin: 0 0 10px;
+      }
+
+      p { margin: 0 0 12px; }
+      ul { margin: 0; padding-left: 18px; }
+      li { margin: 8px 0; }
+
+      p a {
+        text-decoration: underline;
+        font-style: italic;
+      }
+
+      .italicized {
+        font-style: italic;
+      }
+
+      .bold {
+        font-weight: 700;
+      }
+
+      .project {
+        margin: 14px 0;
+      }
+
+      .project img {
+        object-fit: cover;
+        margin-left: auto; 
+        margin-right: auto;
+        display: block;
+        width: 75%;
+      }
+
+      .project .meta {
+        font-style: italic;
+        color: var(--muted);
+        font-size: 14px;
+        margin-top: 0px;
+      }
+
+      .tagline {
+        color: var(--muted);
+        margin-top: 4px;
+        font-size: 14px;
+      }
+
+      footer {
+        margin-top: 42px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      /* small screens */
+      @media (max-width: 520px) {
+        h1 { font-size: 22px; }
+        nav ul { gap: 10px; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="brand">
+          <h1>Haki Shyntassov</h1>
+          <div class="tagline-row">
+            <div class="tagline">Software Engineer • Researcher</div>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <nav aria-label="primary">
+            <ul>
+              <li><a href="#home">home</a></li>
+              <li><a href="#research">research</a></li>
+              <li><a href="#funprojects">projects</a></li>
+              <li><a href="#contact">contact</a></li>
+            </ul>
+          </nav>
+
+          
+        </div>
+      </header>
+
+      <main id="home">
+        <div class="intro">
+          <p class="lede">
+            Hi, I’m Haki!<br><br>
+            I'm a <span class="italicized">software engineer</span> and a <span class="italicized">researcher</span>.
+            My research focuses on <span class="bold">computational modeling and data analysis</span> to classify and better understand cognitive disorders.<br><br>
+            I received my B.S. in Electrical and Computer Engineering at <span class="italicized">Lafayette College</span>, and spent a bit of time working as a software engineer at a fintech company in <span class="italicized">Philadelphia, PA</span>.
+            Feel free to explore my work and reach out if you'd like to connect! ☺
+          </p>
+          <img alt="profile photo" draggable="false" oncontextmenu="return false;" src="img/headshot2.png" class="hoverZoomLink profile-photo">
+        </div>
+        
+        <div class="links">
+          <span><a href="files/Haki Shyntassov CV.pdf" target="_blank" rel="noopener noreferrer">CV</a></span>
+          <span>•</span>
+          <span><a href="https://www.linkedin.com/in/khaknazar-shyntassov/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+          <span>•</span>
+          <span><a href="https://github.com/hakishyntassov" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+        </div>
+
+        <hr />
+
+        <section id="research">
+          <h2>Research</h2>
+
+          <div class="project">
+            <p>
+              <strong>Classification and Predictive Modeling of Dyslexia Among Young Children</strong>
+            </p>
+            <div class="meta">
+              Computational modeling • Data analysis • MATLAB • Python
+            </div>
+            <p>
+              Built a flexible equipment index + tagging approach and standardized family parameters to speed up
+              iteration and coordination.
+            </p>
+            <p>
+              Check out the research paper <a href="https://ieeexplore.ieee.org/document/9751182" target="_blank" rel="noopener noreferrer">here</a> and a conference <a href="files/poster.pdf" target="_blank" rel="noopener noreferrer">here</a>.
+            </p>
+            <img alt="dyslexia maze" draggable="false" oncontextmenu="return false;" src="img/dyslexia.png" class="hoverZoomLink profile-photo">
+          </div>
+
+          <div class="project">
+            <p>
+              <strong>Eye-tracking for dyslexia classification</strong>
+            </p>
+            <div class="meta">
+              Multimodal framework • Signal processing • Data synchronization
+            </div>
+            <p>
+              Developed repeatable checks for circulation and accessibility to catch issues early and reduce late-stage
+              rework.
+            </p>
+            <p>
+              Check out the research paper <a href="https://ieeexplore.ieee.org/document/10635745" target="_blank" rel="noopener noreferrer">here</a>.
+            </p>
+            <img alt="eye tracking heatmap" draggable="false" oncontextmenu="return false;" src="img/eyetracking.png" class="hoverZoomLink profile-photo">
+
+          </div>
+        </section>
+
+        <hr />
+
+        <section id="funprojects">
+          <h2>Projects</h2>
+
+          <div class="project">
+            <p>
+              <strong>Discord Scheduler Bot</strong>
+            </p>
+            <div class="meta">Python • Discord API • SQL</div>
+            <p>
+              Built a scheduling bot that collects availability and ranks overlaps by attendance and preferred times.
+            </p>
+            <p>
+              Check out the Github repository <a href="https://github.com/hakishyntassov/discord-scheduler-bot" target="_blank" rel="noopener noreferrer">here</a>.
+            </p>
+          </div>
+        </section>
+        
+        <hr />
+
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>
+            Email me at <a href="mailto:khaknazarshyntassov@gmail.com">khaknazarshyntassov@gmail.com</a>.
+            If you prefer, you can also reach me on <a href="https://www.linkedin.com/in/khaknazar-shyntassov/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <p>© <span id="year"></span> Haki Shyntassov.</p>
+      </footer>
+    </div>
+
+    <script>
+      // tiny nicety: keep the footer year current
+      document.getElementById('year').textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>
